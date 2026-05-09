@@ -38,7 +38,7 @@ Click the extension icon in your browser toolbar to open the menu, select your s
 
  
 
-<img width="258" height="405" alt="image" src="https://github.com/user-attachments/assets/3ddf329c-e064-4e40-ae2a-60d21e0ff2fd" /> <img width="259" height="404" alt="image" src="https://github.com/user-attachments/assets/de86c5c4-473d-40a8-9bb7-d7a71b7aa47a" />
+<img width="258" height="405" alt="image" src="https://github.com/user-attachments/assets/3ddf329c-e064-4e40-ae2a-60d21e0ff2fd" />
 
 
 
