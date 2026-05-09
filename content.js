@@ -78,8 +78,6 @@ const boardSkins = {
     "default": "icons/default0.png"
 };
 
-// ─── Применение скина доски ───────────────────────────────────────────────────
-
 function applyBoard(boardSkinName) {
     const boardPath = boardSkins[boardSkinName];
     const chessboards = document.querySelectorAll('div[data-testid="chessboard"]');
@@ -89,26 +87,19 @@ function applyBoard(boardSkinName) {
     chessboards.forEach(board => {
         const svg = board.querySelector('svg');
         const boardEffects = board.querySelector('div[data-testid="boardEffects"]');
-
-        // Очищаем старый фон с boardEffects, если он вдруг там остался
         if (boardEffects) {
             boardEffects.style.removeProperty('background');
         }
 
         if (boardPath) { 
-            // Выбран кастомный скин
             const boardUrl = chrome.runtime.getURL(boardPath);
 
-            // Прячем стандартную доску (SVG с клетками)
             if (svg) {
                 svg.style.setProperty('display', 'none', 'important');
             }
-
-            // Ставим фон на КОРЕНЬ (chessboard), чтобы он был самым нижним слоем
             board.style.setProperty('background', `url("${boardUrl}") center/cover no-repeat`, 'important');
             
         } else { 
-            // Выбран дефолтный скин: возвращаем видимость SVG и убираем фон с корня
             if (svg) {
                 svg.style.removeProperty('display');
             }
@@ -116,16 +107,10 @@ function applyBoard(boardSkinName) {
         }
     });
 }
-
-// ─── Скрытие координат ────────────────────────────────────────────────────────
-
 function hideCoordinates() {
-    // Точечно скрываем элементы по атрибуту data-testid
     document.querySelectorAll('div[data-testid^="coordsFile-"], div[data-testid^="coordsRank-"]').forEach(el => {
         el.style.setProperty('display', 'none', 'important');
     });
-
-    // На всякий случай оставляем резервный метод для текста в SVG
     document.querySelectorAll('svg text').forEach(el => {
         const val = el.textContent.trim();
         if (/^([1-9]|10)$/.test(val) || /^[a-jA-J]$/.test(val)) {
@@ -134,14 +119,11 @@ function hideCoordinates() {
     });
 }
 
-// ─── Применение фигур ─────────────────────────────────────────────────────────
-
 function applyPieces(pieceSkinName) {
     const skinMap = skins[pieceSkinName];
     if (!skinMap || Object.keys(skinMap).length === 0) return;
     const pieceKeys = Object.keys(skinMap);
 
-    // Работаем напрямую с div-фигурами
     document.querySelectorAll('div[data-testid="piece"]').forEach(el => {
         const bg = el.style.backgroundImage;
         if (!bg || bg.includes('chrome-extension://')) return;
@@ -153,8 +135,6 @@ function applyPieces(pieceSkinName) {
             }
         }
     });
-
-    // Оставляем резервный метод для тегов <img> (если они используются где-то еще, например в UI сбитых фигур)
     document.querySelectorAll('img').forEach(el => {
         const src = el.src;
         if (!src || src.includes('chrome-extension://')) return;
@@ -168,7 +148,6 @@ function applyPieces(pieceSkinName) {
     });
 }
 
-// ─── Главный цикл ─────────────────────────────────────────────────────────────
 
 function run() {
     chrome.storage.local.get(['activePieceSkin', 'activeBoardSkin'], (res) => {
