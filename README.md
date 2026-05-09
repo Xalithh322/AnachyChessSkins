@@ -37,10 +37,11 @@ Click the extension icon in your browser toolbar to open the menu, select your s
 <img width="402" height="210" alt="image" src="https://github.com/user-attachments/assets/9fc89f8b-6633-4a58-a4a8-51be5c9ba703" />
 
 * **Created by:** Xalithh
+
 Any modifications or improvements to this extension are welcome
 
 
-
+  
 
 Update: v2 -> v1.2.1
 
