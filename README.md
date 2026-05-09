@@ -36,11 +36,6 @@ Click the extension icon in your browser toolbar to open the menu, select your s
 
 <img width="402" height="210" alt="image" src="https://github.com/user-attachments/assets/9fc89f8b-6633-4a58-a4a8-51be5c9ba703" />
 
- 
-
-<img width="258" height="405" alt="image" src="https://github.com/user-attachments/assets/3ddf329c-e064-4e40-ae2a-60d21e0ff2fd" />
-
-
-
 * **Created by:** Xalithh
+
 Any modifications or improvements to this extension are welcome
