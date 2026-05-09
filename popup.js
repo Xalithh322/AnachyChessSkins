@@ -1,4 +1,3 @@
-// Переключение вкладок
 document.querySelectorAll('.tab-btn').forEach(function(btn) {
     btn.addEventListener('click', function() {
         document.querySelectorAll('.tab-btn').forEach(function(b) { b.classList.remove('active'); });
@@ -8,7 +7,6 @@ document.querySelectorAll('.tab-btn').forEach(function(btn) {
     });
 });
 
-// Выделение карточки скина
 function selectOption(group, value) {
     document.querySelectorAll('.option[data-group="' + group + '"]').forEach(function(el) {
         var isSelected = el.dataset.value === value;
@@ -24,13 +22,11 @@ document.querySelectorAll('.option').forEach(function(label) {
     });
 });
 
-// Загрузка сохранённых настроек
 chrome.storage.local.get(['activePieceSkin', 'activeBoardSkin'], function(res) {
     selectOption('pieceSkin', res.activePieceSkin || 'custom1');
     selectOption('boardSkin', res.activeBoardSkin || 'default');
 });
 
-// Сохранение
 document.getElementById('save').addEventListener('click', function() {
     var pieceEl = document.querySelector('.option[data-group="pieceSkin"].selected');
     var boardEl = document.querySelector('.option[data-group="boardSkin"].selected');
