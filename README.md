@@ -36,15 +36,13 @@ Click the extension icon in your browser toolbar to open the menu, select your s
 
 <img width="402" height="210" alt="image" src="https://github.com/user-attachments/assets/9fc89f8b-6633-4a58-a4a8-51be5c9ba703" />
 
-* **Created by:** Xalithh
-
-Any modifications or improvements to this extension are welcome
-
-
-  
-
 Update: v2 -> v1.2.1:
 1. Version Overhaul: Cleaned up the versioning format. (No more random numbers we're following a proper system now lol)
 2. New Board Theme: Added the Wood board option to the selection menu.
 3. Fixed Board Notations: Corrected notations for the Black side. Previously, the board and coordinates were displayed the same way for both colors; now they flip correctly based on your side.
 4. Perspective Toggle: Added a button to visually swap colors. You can now force the board to display from either the White or Black perspective whenever you want!
+   ㅤ⠀​
+​ㅤ⠀
+  ㅤ⠀
+* **Created by:** Xalithh
+Any modifications or improvements to this extension are welcome
