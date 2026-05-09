@@ -45,4 +45,4 @@ Update: v2 -> v1.2.1:
 ​ㅤ⠀
   ㅤ⠀
 * **Created by:** Xalithh
-Any modifications or improvements to this extension are welcome
+   Any modifications or improvements to this extension are welcome
