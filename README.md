@@ -1,5 +1,5 @@
 # AnachyChessSkin
-    * **Created by:** Xalithh
+    Created by: Xalithh
 ## Credits & Attribution
 
 This is an unofficial extension for AnarchyChess. I do not claim ownership of the original project, its assets, or the brand.
