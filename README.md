@@ -43,6 +43,5 @@ Update: v2 -> v1.2.1:
 4. Perspective Toggle: Added a button to visually swap colors. You can now force the board to display from either the White or Black perspective whenever you want!
    ㅤ⠀​
 ​ㅤ⠀
-  ㅤ⠀
 * **Created by:** Xalithh
    Any modifications or improvements to this extension are welcome
