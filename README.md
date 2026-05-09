@@ -24,15 +24,18 @@ Turn on the Developer mode toggle in the top-right corner.
 
 <img width="152" height="36" alt="image" src="https://github.com/user-attachments/assets/e050b90f-54fd-454c-8863-f41321ad3be7" />
 
+
 4. Load the Extension
 Click Load unpacked and select the folder where you extracted the files.
 
 <img width="138" height="46" alt="image" src="https://github.com/user-attachments/assets/ecd3b505-2d8f-4455-aab6-08bc6f100c51" />
+
 
 5. Configure
 Click the extension icon in your browser toolbar to open the menu, select your skins, and click Save Changes.
 
 <img width="402" height="210" alt="image" src="https://github.com/user-attachments/assets/9fc89f8b-6633-4a58-a4a8-51be5c9ba703" />
 
+ 
 
 <img width="258" height="405" alt="image" src="https://github.com/user-attachments/assets/3ddf329c-e064-4e40-ae2a-60d21e0ff2fd" />
