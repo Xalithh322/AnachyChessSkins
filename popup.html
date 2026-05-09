@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    * { box-sizing: border-box; }
+    body { 
+      width: 260px; 
+      padding: 15px; 
+      font-family: 'Segoe UI', Tahoma, sans-serif; 
+      background: #262421; 
+      color: white; 
+      margin: 0; 
+      display: flex; 
+      flex-direction: column; 
+      align-items: center; 
+    }
+    .menu-tabs { 
+      display: flex; width: 100%; margin-bottom: 15px; border-bottom: 1px solid #403d39; 
+    }
+    .tab-btn { 
+      flex: 1; padding: 8px; cursor: pointer; background: none; border: none; 
+      color: #bababa; font-weight: bold; font-size: 13px; transition: color 0.15s;
+    }
+    .tab-btn.active { color: #81b64c; border-bottom: 2px solid #81b64c; }
+    .tab-btn:hover { color: white; }
+    .grid { 
+      display: grid; grid-template-columns: repeat(2, 1fr); 
+      gap: 12px; margin-bottom: 12px; width: 100%; 
+    }
+    .tab-content { display: none; width: 100%; }
+    .tab-content.active { display: block; }
+    .option { 
+      display: flex; flex-direction: column; align-items: center; 
+      cursor: pointer; user-select: none;
+    }
+    .option input[type="radio"] { 
+      position: absolute; opacity: 0; width: 0; height: 0; pointer-events: none;
+    }
+    .preview { 
+      width: 100px; height: 100px; border: 2px solid #403d39; border-radius: 6px; 
+      margin-bottom: 5px; object-fit: cover; transition: border-color 0.15s;
+      display: block; background: #403d39;
+    }
+    .option:hover .preview { border-color: #6a9a3e; }
+    .option.selected .preview { border-color: #81b64c; box-shadow: 0 0 0 1px #81b64c; }
+    .label-text { font-size: 12px; color: #bababa; }
+    .flip-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      width: 100%;
+      margin-bottom: 14px;
+      padding: 8px 10px;
+      background: #1e1c1a;
+      border-radius: 6px;
+      cursor: pointer;
+      user-select: none;
+    }
+    .flip-row:hover { background: #2e2b28; }
+    .flip-checkbox {
+      width: 16px;
+      height: 16px;
+      accent-color: #81b64c;
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+    .flip-label {
+      font-size: 13px;
+      color: #bababa;
+    }
+    #save { 
+      width: 100%; padding: 10px; cursor: pointer; background: #81b64c; 
+      border: none; color: white; font-weight: bold; border-radius: 4px;
+      font-size: 14px; transition: background 0.15s;
+    }
+    #save:hover { background: #9acc5a; }
+    #save:active { background: #6a9a3e; }
+    #status { font-size: 11px; color: #81b64c; height: 16px; margin-top: 6px; text-align: center; }
+  </style>
+</head>
+<body>
+  <div class="menu-tabs">
+    <button class="tab-btn active" data-tab="pieces">Skins</button>
+    <button class="tab-btn" data-tab="board">Board</button>
+  </div>
+
+  <div id="pieces" class="tab-content active">
+    <div class="grid">
+      <label class="option" data-group="pieceSkin" data-value="custom1">
+        <input type="radio" name="pieceSkin" value="custom1">
+        <img src="icons/custom1.png" class="preview">
+        <span class="label-text">Chess.com</span>
+      </label>
+      <label class="option" data-group="pieceSkin" data-value="custom2">
+        <input type="radio" name="pieceSkin" value="custom2">
+        <img src="icons/custom2.png" class="preview">
+        <span class="label-text">The fuck</span>
+      </label>
+      <label class="option" data-group="pieceSkin" data-value="custom3">
+        <input type="radio" name="pieceSkin" value="custom3">
+        <img src="icons/custom3.png" class="preview">
+        <span class="label-text">Blindfolded</span>
+      </label>
+      <label class="option" data-group="pieceSkin" data-value="default">
+        <input type="radio" name="pieceSkin" value="default">
+        <img src="icons/default.png" class="preview">
+        <span class="label-text">Default</span>
+      </label>
+    </div>
+
+    <div class="flip-row" id="flipRow">
+      <input type="checkbox" class="flip-checkbox" id="flipColors">
+      <span class="flip-label">Flip piece colors</span>
+    </div>
+  </div>
+
+  <div id="board" class="tab-content">
+    <div class="grid">
+      <label class="option" data-group="boardSkin" data-value="custom1">
+        <input type="radio" name="boardSkin" value="custom1">
+        <img src="icons/board1ico.png" class="preview">
+        <span class="label-text">Dark-Gray</span>
+      </label>
+      <label class="option" data-group="boardSkin" data-value="custom2">
+        <input type="radio" name="boardSkin" value="custom2">
+        <img src="icons/board2ico.png" class="preview">
+        <span class="label-text">Brown</span>
+      </label>
+      <label class="option" data-group="boardSkin" data-value="custom3">
+        <input type="radio" name="boardSkin" value="custom3">
+        <img src="icons/board3ico.png" class="preview">
+        <span class="label-text">Wood</span>
+      </label>
+      <label class="option" data-group="boardSkin" data-value="default">
+        <input type="radio" name="boardSkin" value="default">
+        <img src="icons/board_default.png" class="preview">
+        <span class="label-text">Default</span>
+      </label>
+    </div>
+  </div>
+
+  <button id="save">Save Changes</button>
+  <div id="status"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
